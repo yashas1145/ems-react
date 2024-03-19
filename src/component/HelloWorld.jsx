@@ -3,7 +3,7 @@ import React from "react";
 function HelloWorld() {
     return (
         <>
-            <h2>Hello Yashas!!!</h2>
+            <h1 className="text-center">Hello Yashas!!!</h1>
         </>
     );
 }
