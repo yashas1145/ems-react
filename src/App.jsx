@@ -1,12 +1,23 @@
 import React from "react";
-import HelloWorld from "./component/HelloWorld";
+import ListEmployee from "./component/ListEmployee";
+import Header from "./component/Header";
+import Footer from "./component/Footer";
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import AddEmployee from "./component/AddEmployee";
 
 function App() {
 
   return (
     <>
-      <h1>Hello Vite React!</h1>
-      <HelloWorld />
+      <BrowserRouter>
+        <Header />
+        <Routes>
+          <Route path='/' element={<ListEmployee />}/>
+          <Route path='/employees' element={<ListEmployee />}/>
+          <Route path='/add-employee' element={<AddEmployee />}/>
+        </Routes>
+        <Footer />
+      </BrowserRouter>
     </>
   );
 }
