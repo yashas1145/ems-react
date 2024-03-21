@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const REST_API_BASE_URL = "http://localhost:8080/api/employee";
+const REST_API_BASE_URL = "https://ems-springboot-backend-b0c75be7bca0.herokuapp.com/api/employee";
 
 export const listEmployees = async () => await axios.get(REST_API_BASE_URL);
 

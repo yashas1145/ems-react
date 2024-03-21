@@ -109,7 +109,7 @@ const AddEmployee = () => {
                                 <input className={`form-control ${errors.email ? 'is-invalid' : ''}`} type='text' name='email' value={empDetail.email} onChange={handleEmpChange} placeholder='Enter employee email'/>
                                 {errors.email && <div className='invalid-feedback'>{errors.email}</div>}
 
-                                <button className='btn btn-success mt-2 mb-2' onClick={saveEmployee}>Submit</button>
+                                <button className='btn btn-success mt-2 mb-2' onClick={saveEmployee}>{pageTitle()}</button>
                             </div>
                         </form>
                     </div>

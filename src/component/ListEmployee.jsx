@@ -36,11 +36,9 @@ const ListEmployee = () => {
     return (
         <div className="container">
             <h2 className='text-center mt-2'>List of employees</h2>
-            <button className='btn btn-primary mb-2' onClick={addEmployee}>Add employee</button>
             <table className="table table-bordered table-hover">
                 <thead>
                     <tr>
-                        <th className='text-center'>Employee ID</th>
                         <th className='text-center'>First name</th>
                         <th className='text-center'>Last name</th>
                         <th className='text-center'>Email</th>
@@ -51,7 +49,6 @@ const ListEmployee = () => {
                     {
                         employees.map(employee => 
                             <tr key={employee.id}>
-                                <td>{employee.id}</td>
                                 <td>{employee.firstName}</td>
                                 <td>{employee.lastName}</td>
                                 <td>{employee.email}</td>
@@ -66,6 +63,7 @@ const ListEmployee = () => {
                     }
                 </tbody>
             </table>
+            <button className='btn btn-primary mb-2' onClick={addEmployee}>Add employee</button>
         </div>
     );
 };
